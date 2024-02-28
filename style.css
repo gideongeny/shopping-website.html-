@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10git i0;
     
 }
 
@@ -117,7 +117,7 @@ nav a {
 
 .product-table {
     margin-top: 20px;
-    width: 100%;
+    width: 200%;
     border-collapse: collapse;
 }
 
@@ -216,14 +216,15 @@ footer {
 
 }
 .body .Flashsales .product{
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
 display: flex;
 flex-direction: column;
 }
 .body .Flashsales .product img{
-    width: 100%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
+
 
 }
