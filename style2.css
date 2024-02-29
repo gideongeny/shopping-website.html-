@@ -5,8 +5,8 @@ body {
 }
 
 .header {
-    background-color: red;
-    color: white;
+    background-color: rgb(228, 8, 8);
+    color: rgb(185, 24, 24);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ nav a {
 }
 
 .header-right a {
-    color: white;
+    color: rgb(14, 12, 12);
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ button {
 
 button {
     background-color: red;
-    color: white;
+    color: rgb(231, 46, 46);
     border: none;
     cursor: pointer;
 }
