@@ -17,6 +17,7 @@ header {
     border-bottom: 1px solid #0a0909;
 }
 
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -204,7 +205,7 @@ header {
 button[type="submit"] {
     padding: 10px 20px;
     background-color: #f5ecec;
-    color: #fff;
+    color: #070101;
     border: none;
     cursor: pointer;
 }
@@ -224,4 +225,7 @@ footer p {
 footer a {
     color: #fff;
     text-decoration: none;
+}
+nav ul a{
+    color: #000;
 }
