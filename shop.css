@@ -1,0 +1,165 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.red {
+    color: red;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.corner-link {
+    margin-right: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    padding: 8px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-links {
+    display: flex;
+}
+
+.user-links .user-link {
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    margin-right: 10px;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.category-section {
+    flex-basis: 30%;
+}
+
+.category-table {
+    margin-bottom: 20px;
+}
+
+.category-table button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.quantity {
+    margin-left: 5px;
+}
+
+.brands-select {
+    margin-bottom: 20px;
+}
+
+.price-range {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.price-display {
+    margin-bottom: 20px;
+}
+
+.size-options {
+    display: flex;
+}
+
+.size-box {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.color-select {
+    margin-bottom: 20px;
+}
+
+.product-section {
+    flex-basis: 65%;
+}
+
+.product-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.product-details h2 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.star-ratings {
+    /* Star Ratings CSS */
+}
+
+.add-to-cart-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    
+}
+nav ul{
+    display: flex;
+    gap: 10px;
+
+}
+nav ul a{
+    color: #000;
+    text-decoration: none;
+}

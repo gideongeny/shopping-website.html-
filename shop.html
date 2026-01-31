@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | RAF CART</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .shop-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            padding: 120px 5% 5rem;
+        }
+
+        .filters-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .filter-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-group h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            color: var(--white);
+        }
+
+        .filter-list {
+            list-style: none;
+        }
+
+        .filter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-item:hover {
+            color: var(--accent-color);
+        }
+
+        .filter-item span.count {
+            background: var(--glass-bg);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .shop-container {
+                grid-template-columns: 1fr;
+            }
+
+            .filters-sidebar {
+                display: none;
+                /* In a real app, we'd add a mobile drawer */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header" class="scrolled">
+        <div class="logo">
+            <h1 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: white;">RAF<span
+                    style="color: var(--accent-color);">CART</span></h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="pages.html">Collections</a>
+            <a href="login.html">Contact</a>
+        </nav>
+        <div class="header-actions" style="display: flex; gap: 1.5rem; align-items: center;">
+            <i class="fa fa-search" style="color: var(--text-secondary); cursor: pointer;"></i>
+            <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+            <a href="login.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Login</a>
+        </div>
+    </header>
+
+    <main class="shop-container">
+        <aside class="filters-sidebar glass">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <ul class="filter-list">
+                    <li class="filter-item">Women <span class="count">12</span></li>
+                    <li class="filter-item">Men <span class="count">8</span></li>
+                    <li class="filter-item">Accessories <span class="count">15</span></li>
+                    <li class="filter-item">Shoes <span class="count">6</span></li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <input type="range" min="0" max="1000" value="500">
+                <div
+                    style="display: flex; justify-content: space-between; margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                    <span>$0</span>
+                    <span>$1000</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Brands</h3>
+                <ul class="filter-list">
+                    <li class="filter-item">Nike</li>
+                    <li class="filter-item">Adidas</li>
+                    <li class="filter-item">Puma</li>
+                    <li class="filter-item">Reebok</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="shop-content">
+            <div class="shop-header">
+                <h2>Browse All Products</h2>
+                <div class="sort-options" style="color: var(--text-secondary);">
+                    Sort by: <span style="color: var(--white); cursor: pointer;">Newest <i class="fa fa-chevron-down"
+                            style="font-size: 0.8rem;"></i></span>
+                </div>
+            </div>
+
+            <div class="product-grid" style="padding: 0; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="matress.jpg" alt="Premium Mattress">
+                    <h3>Premium Mattress</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Luxury sleep
+                        redefined.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="price">$200.00</span>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
+                            Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="run-active-men-s-running-shoe-blackslashyellow.avif" alt="Elite Running Shoes">
+                    <h3>Elite Running Shoes</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">High-performance
+                        gear.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="price">$1,000.00</span>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
+                            Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="stool.jpeg" alt="Designer Stool">
+                    <h3>Modern Designer Stool</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Minimalist
+                        aesthetic for your home.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="price">$300.00</span>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
+                            Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="playmobil.jpg" alt="Exclusive Playmobil">
+                    <h3>Collector's Playmobil</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Limited edition
+                        designer toy.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="price">$100.00</span>
+                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 style="font-family: 'Outfit', sans-serif; margin-bottom: 1.5rem;">RAF<span
+                        style="color: var(--accent-color);">CART</span></h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Setting the standard for modern e-commerce
+                    through exceptional design and premium products.</p>
+                <div class="social-links" style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--text-secondary); font-size: 1.5rem;"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--text-secondary); font-size: 1.5rem;"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: var(--text-secondary); font-size: 1.5rem;"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"
+            style="border-top: 1px solid var(--glass-border); padding-top: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+            <p>&copy; 2026 RAF CART. Created with excellence by <a href="#"
+                    style="color: var(--accent-color); text-decoration: none; font-weight: 600;">MUKHTAR</a>.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
