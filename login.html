@@ -120,7 +120,10 @@
             <a href="login.html">Login</a>
         </nav>
         <div class="header-actions" style="display: flex; gap: 1.5rem; align-items: center;">
-            <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+            <div class="cart-toggle">
+                <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+                <span class="cart-count">0</span>
+            </div>
             <a href="login.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Login</a>
         </div>
     </header>
@@ -175,6 +178,27 @@
                     style="color: var(--accent-color); text-decoration: none; font-weight: 600;">MUKHTAR</a>.</p>
         </div>
     </footer>
+
+    <div class="cart-overlay"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="cart-total-amount">$0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; padding: 1.2rem;">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="cart.js"></script>
 </body>
 
 </html>

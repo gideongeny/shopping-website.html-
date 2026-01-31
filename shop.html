@@ -106,7 +106,10 @@
         </nav>
         <div class="header-actions" style="display: flex; gap: 1.5rem; align-items: center;">
             <i class="fa fa-search" style="color: var(--text-secondary); cursor: pointer;"></i>
-            <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+            <div class="cart-toggle">
+                <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+                <span class="cart-count">0</span>
+            </div>
             <a href="login.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Login</a>
         </div>
     </header>
@@ -162,8 +165,9 @@
                         redefined.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$200.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="s1" data-name="Premium Mattress"
+                            data-price="200.00" data-image="matress.jpg"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
 
@@ -175,8 +179,9 @@
                         gear.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$1,000.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="s2" data-name="Elite Running Shoes"
+                            data-price="1000.00" data-image="run-active-men-s-running-shoe-blackslashyellow.avif"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
 
@@ -188,8 +193,9 @@
                         aesthetic for your home.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$300.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="s3" data-name="Modern Designer Stool"
+                            data-price="300.00" data-image="stool.jpeg"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
 
@@ -201,8 +207,9 @@
                         designer toy.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$100.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="s4" data-name="Collector's Playmobil"
+                            data-price="100.00" data-image="playmobil.jpg"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
             </div>

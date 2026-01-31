@@ -32,7 +32,10 @@
         </nav>
         <div class="header-actions" style="display: flex; gap: 1.5rem; align-items: center;">
             <i class="fa fa-search" style="color: var(--text-secondary); cursor: pointer;"></i>
-            <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+            <div class="cart-toggle">
+                <i class="fa fa-shopping-cart" style="color: var(--text-secondary); cursor: pointer;"></i>
+                <span class="cart-count">0</span>
+            </div>
             <a href="login.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Login</a>
         </div>
     </header>
@@ -67,8 +70,9 @@
                         leather accessory.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$45.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="p1" data-name="Women Scrub Leather"
+                            data-price="45.00" data-image="1.jpg" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add
+                            to Cart</button>
                     </div>
                 </div>
 
@@ -80,8 +84,9 @@
                         timeless design.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$45.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="p2" data-name="Mens Premium T-Shirt"
+                            data-price="45.00" data-image="download.jpg"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
 
@@ -93,8 +98,9 @@
                         designer collection.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$45.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="p3" data-name="Collector's Playmobil"
+                            data-price="45.00" data-image="playmobil.jpg"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
 
@@ -106,8 +112,9 @@
                         gear for athletes.</p>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span class="price">$45.00</span>
-                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to
-                            Cart</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-id="p4" data-name="Elite Running Shoes"
+                            data-price="45.00" data-image="run-active-men-s-running-shoe-blackslashyellow.avif"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -164,6 +171,26 @@
         </div>
     </footer>
 
+    <div class="cart-overlay"></div>
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="cart-total-amount">$0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; padding: 1.2rem;">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="cart.js"></script>
     <script>
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
