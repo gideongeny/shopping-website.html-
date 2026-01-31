@@ -44,7 +44,42 @@ class CartManager {
                 const id = e.target.closest('.remove-item').dataset.id;
                 this.removeFromCart(id);
             }
+            // Checkout
+            if (e.target.closest('.btn-checkout')) {
+                this.handleCheckout();
+            }
         });
+    }
+
+    handleCheckout() {
+        if (this.cart.length === 0) {
+            this.showNotification("Your cart is empty!");
+            return;
+        }
+
+        const checkoutBtn = document.querySelector('.btn-checkout');
+        const originalText = checkoutBtn.textContent;
+        checkoutBtn.textContent = "Processing...";
+        checkoutBtn.disabled = true;
+
+        setTimeout(() => {
+            this.showCheckoutSuccess();
+            this.cart = [];
+            this.saveCart();
+            this.updateCartUI();
+            this.toggleCartDrawer(false);
+            checkoutBtn.textContent = originalText;
+            checkoutBtn.disabled = false;
+        }, 1500);
+    }
+
+    showCheckoutSuccess() {
+        const modal = document.querySelector('.checkout-modal');
+        const overlay = document.querySelector('.modal-overlay');
+        if (modal && overlay) {
+            modal.classList.add('active');
+            overlay.classList.add('active');
+        }
     }
 
     addToCart(product) {
